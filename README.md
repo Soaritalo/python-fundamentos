@@ -1,15 +1,12 @@
- Python para Análise de Dados !
+# Python Fundamentos
 
-Repositório de estudos do curso de Python para Dados da Alura.
+Repositório com exercícios de fundamentos de Python, organizados por curso.
 
-----> Conteúdos estudados
-Python básico
-- Listas, dicionários e funções
-  Pandas
- Leitura e tratamento de dados
-  Análise exploratória de dados
+## Estrutura
 
- ---> Objetivo
-Consolidar os estudos em Python aplicados à análise de dados por meio de exemplos e exercícios práticos.
+- `alura/` — exercícios do curso de Python para Análise de Dados (Alura): `for/`, `if/`, `while/`, `print/`, `dados/`.
+- `udemy/` — exercícios de um curso de Python do Udemy (em andamento).
 
- Repositório em constante atualização
+## Objetivo
+
+Consolidar em um único lugar os exercícios básicos de Python feitos em diferentes cursos, evitando criar um repositório novo para cada um.
