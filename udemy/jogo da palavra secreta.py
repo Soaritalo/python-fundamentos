@@ -3,7 +3,7 @@ letras_certas = ''
 contador = 0
 censura = ''
 while censura != palavra_secreta:
-
+    
     letra = input("Digite uma Letra: ")
 
     tamanho_letra = len(letra)
@@ -26,9 +26,10 @@ while censura != palavra_secreta:
             censura += i
         else:
             censura += '*'
-
+    
     print(censura)
 
 print("Você acertou! Foram", contador, "tentativas.")
+print("A palavra secreta era:",palavra_secreta)
 
 
