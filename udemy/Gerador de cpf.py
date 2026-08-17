@@ -1,54 +1,40 @@
-# "
-# Calculo do primeiro dígito do CPF
-# CPF: 746.824.890-70
-# Colete a soma dos 9 primeiros dígitos do CPF
-# multiplicando cada um dos valores por uma
-# contagem regressiva começando de 10
+import random
+def gerador_de_cpf():
+    base = [random.randint(0,9) for _ in range(9)]
+    return base
 
-# Ex.:  746.824.890-70 (746824890)
-#    10  9  8  7  6  5  4  3  2
-# *  7   4  6  8  2  4  8  9  0
-#    70  36 48 56 12 20 32 27 0
+# print(gerador_de_cpf())
 
-# Somar todos os resultados: 
-# 70+36+48+56+12+20+32+27+0 = 301
-# Multiplicar o resultado anterior por 10
-# 301 * 10 = 3010
-# Obter o resto da divisão da conta anterior por 11
-# 3010 % 11 = 7
-# Se o resultado anterior for maior que 9:
-#     resultado é 0
-# contrário disso:
-#     resultado é o valor da conta
-# O primeiro dígito do CPF é 7
+def validador_de_cpf(quantidade):
+    resultado = []
+    for _ in range(quantidade):
+        verificacao = [ 10 , 9 , 8 , 7 , 6 ,5 , 4,  3 , 2]
+        cpf = gerador_de_cpf()
+    # cpf = cpf.replace("-", "").replace(".", "")
+    # lista = [int(c) for c in cpf]
+        digitos = []
 
-verificacao = [ 10 , 9 , 8 , 7 , 6 ,5 , 4,  3 , 2]
-cpf = input("Digite um cpf valido: ")
-cpf = cpf.replace("-", "").replace(".", "")
-# cpf = '15497149707'
-if not cpf.isdigit():
-    print("Digite um NUMERO!")
-else:
-    lista = [int(c) for c in cpf]
-    digitos = []
+        for i in range(2):
+            peso = 10 + i          # começa em 10, depois em 11
+            qtd = 9 + i            # usa 9 dígitos, depois 10
+            soma = 0
+            for j in range(qtd):
+                soma += cpf[j] * (peso - j)
 
-    for i in range(2):
-        peso = 10 + i          # começa em 10, depois em 11
-        qtd = 9 + i            # usa 9 dígitos, depois 10
-        soma = 0
-        for j in range(qtd):
-            soma += lista[j] * (peso - j)
+            correcao = (soma * 10) % 11
+            if correcao > 9:
+                correcao = 0
+            digitos.append(correcao)
+            cpf.append(correcao)
 
-        correcao = (soma * 10) % 11
-        if correcao > 9:
-            correcao = 0
-        digitos.append(correcao)
-
-print(digitos)
-validado = cpf[:9] + str(digitos[0]) + str(digitos[1])
-print(validado)
-
-if cpf == validado:
-            print('CPF Validado!!')
-else :
-      print('CPF Invalido!!!!!!')
+        # print(digitos)
+        validado = "".join(str(d) for d in cpf)
+        resultado.append(validado)
+        # print(f"CPF original: {cpf}")
+        # print(f"CPF validado: {validado}")
+        # if cpf == validado:
+        #         print('CPF Validado!!')
+        # else :
+        #         print('CPF Invalido!!!!!!')
+    return(resultado)
+print("Cpf`s validados:", validador_de_cpf(5))
