@@ -1,0 +1,2 @@
+  system
+* 3.12.4 (set by /home/italo/.pyenv/version)
