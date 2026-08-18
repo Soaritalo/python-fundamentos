@@ -9,4 +9,4 @@ Repositório com exercícios de fundamentos de Python, organizados por curso.
 
 ## Objetivo
 
-Consolidar em um único lugar os exercícios básicos de Python feitos em diferentes cursos, evitando criar um repositório novo para cada um.
+Consolidar em um único lugar os exercícios básicos/intermediários de Python feitos em diferentes cursos, evitando criar um repositório novo para cada um.
