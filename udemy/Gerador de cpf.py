@@ -1,6 +1,6 @@
 import random
 def gerador_de_cpf():
-    base = [random.randint(0,9) for  in range(9)]
+    base = [random.randint(0,9) for _ in range(9)]
     return base
 
 def validador_de_cpf(quantidade):
