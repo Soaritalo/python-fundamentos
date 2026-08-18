@@ -14,12 +14,15 @@ def multiplicacao(*args):
         total = numero * total
     return total
 
-numeros_digitados = input("Digite um numero: ")
+numeros_digitados = input("Digite um numero para a multiplicação: ")
 partes = numeros_digitados.split()
 formato =  [int(_) for _ in partes]
 resultadototal = multiplicacao(*formato)
 print(resultadototal)
 
-if resultadototal % 2 == 0:
+if resultadototal == 0:
+    print("Seu numero deu 0")
+elif resultadototal % 2 == 0:
     print("seu numero é par")
 else : print("seu numero é impar")
+

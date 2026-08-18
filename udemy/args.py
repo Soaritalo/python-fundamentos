@@ -4,6 +4,8 @@ def soma(*args):
         total += numero
     return total
 
+
+
 digitado  = input("Digite numeros: ")   
 partes  = digitado.split()              
 numeros   = [int(_) for _ in partes]    
