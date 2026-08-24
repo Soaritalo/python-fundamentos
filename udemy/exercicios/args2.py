@@ -33,3 +33,5 @@ def par_Impar(numero):
         return("seu numero é par")
     else : return("seu numero é impar")
 print(par_Impar(resultadototal))
+
+
