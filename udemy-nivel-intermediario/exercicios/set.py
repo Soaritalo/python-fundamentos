@@ -25,3 +25,12 @@ lista_de_listas_de_inteiros = [
     [5, 3, 1, 8, 5, 7, 1, 8, 8, 7],
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
 ]
+
+
+for numero in lista_de_listas_de_inteiros:
+    mais_repetido = max(set(numero), key=numero.count)
+    qtd = numero.count(mais_repetido)
+    if qtd > 1 :
+        print(mais_repetido)
+    else:
+        print('-1')

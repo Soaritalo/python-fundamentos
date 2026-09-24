@@ -1,0 +1,11 @@
+produto = {
+    'nome': 'Manoel Gomes',
+    'preco': 2.5,
+    'categoria': 'Escritorio',
+}
+novo = {
+    chave:valor.lower()
+    if isinstance(valor, str) else valor
+    for chave, valor in produto.items()
+}
+print(novo)
